@@ -18,7 +18,7 @@
     box-sizing: border-box;
 }
 
-p{
+p {
     margin-bottom: 1rem;
 }
 
@@ -45,7 +45,7 @@ h4 {
     line-height: 1.2;
 }
 
-h2{
+h2 {
     font-size: 2.5rem;
 }
 
@@ -192,6 +192,7 @@ header.scrolled {
 
 .links-container {
     display: flex;
+    justify-content: flex-end;
     align-items: center;
     gap: 2rem;
     width: 80%;
@@ -300,8 +301,12 @@ header.scrolled {
     width: 100%;
     height: 500px;
     object-fit: cover;
+    object-position: top;
+    /* ADICIONE ESTA LINHA PARA NÃO CORTAR A CABEÇA */
     border-radius: 1rem;
     box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+    position: relative;
+    z-index: 2;
 }
 
 .about-list {
@@ -609,7 +614,7 @@ footer p {
     }
 
     .hero {
-        padding-top: 2rem;
+        padding-top: 6rem;
         /* Atualizado para se alinhar com a Quote Bar */
         text-align: center;
     }
