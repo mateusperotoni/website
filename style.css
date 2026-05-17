@@ -319,6 +319,45 @@ header.scrolled {
     font-size: 0.9rem;
 }
 
+/* --- CONSULTÓRIO --- */
+.office-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1.5rem;
+    max-width: 1000px;
+    /* Mantém as fotos centralizadas e num tamanho agradável */
+    margin: 2rem auto 0 auto;
+}
+
+.office-card {
+    border-radius: 1rem;
+    overflow: hidden;
+    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+    transition: var(--transition);
+}
+
+.office-card:hover {
+    box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
+    transform: translateY(-4px);
+    /* Efeito suave de levantar ao passar o mouse */
+}
+
+.office-card img {
+    width: 100%;
+    height: 320px;
+    /* Equivalente ao h-80 do Tailwind */
+    object-fit: cover;
+    display: block;
+    /* Remove o pequeno espaço branco padrão abaixo de imagens */
+}
+
+/* Responsividade para celulares - Coloca uma foto embaixo da outra */
+@media (max-width: 768px) {
+    .office-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
 /* --- FAQ --- */
 .faq-container {
     max-width: 800px;
