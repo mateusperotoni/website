@@ -185,8 +185,16 @@ header.scrolled {
 
 .nav-links {
     display: flex;
+    justify-content: flex-end;
     list-style: none;
     gap: 2rem;
+}
+
+.links-container {
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+    width: 80%;
 }
 
 .nav-links a {
@@ -199,28 +207,7 @@ header.scrolled {
     color: var(--color-primary);
 }
 
-/* --- QUOTE BAR --- */
-.quote-bar {
-    background-color: var(--color-bg-light);
-    padding: 2rem 1rem;
-    margin-top: 80px;
-    /* Empurra a citação para baixo do header fixo */
-    border-bottom: 1px solid rgba(0, 0, 0, 0.05);
-}
 
-.quote-text {
-    font-family: var(--font-heading);
-    font-size: 1.25rem;
-    font-style: italic;
-    color: var(--color-text-dark);
-    margin-bottom: 0.5rem;
-}
-
-.quote-author {
-    font-size: 0.875rem;
-    font-weight: 500;
-    color: var(--color-primary-dark);
-}
 
 /* --- HERO SECTION --- */
 .hero {
@@ -228,7 +215,7 @@ header.scrolled {
     /* Ajusta a altura considerando o header e a citação */
     display: flex;
     align-items: center;
-    padding-top: 2rem;
+    padding-top: 8rem;
     padding-bottom: 4rem;
 }
 
