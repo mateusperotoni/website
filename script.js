@@ -1,7 +1,7 @@
-// Renderiza os ícones do Lucide (substitui os <i> pelos SVGs correspondentes)
-lucide.createIcons();
-
 document.addEventListener('DOMContentLoaded', () => {
+
+    // Renderiza os ícones do Lucide (substitui os <i> pelos SVGs correspondentes)
+    lucide.createIcons();
 
     // 1. Efeito de Scroll no Header
     const header = document.getElementById('main-header');
