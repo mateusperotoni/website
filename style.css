@@ -409,95 +409,57 @@ header.scrolled {
     padding-bottom: 1.5rem;
 }
 
-/* --- CONTACT / FORMS --- */
-.contact-box {
-    background-color: var(--color-white);
-    border-radius: 1.5rem;
-    display: flex;
-    overflow: hidden;
-    box-shadow: 0 25px 50px rgba(0, 0, 0, 0.15);
+/* --- CTA SECTION (AGENDAR) --- */
+.cta-simple {
+    max-width: 800px;
+    margin: 0 auto;
+    text-align: center;
+    color: var(--color-white);
 }
 
-.contact-info {
-    flex: 1;
-    background-color: var(--color-bg-light);
-    padding: 4rem;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-}
-
-.contact-form {
-    flex: 1;
-    padding: 4rem;
-}
-
-.form-group {
+.cta-simple h2 {
+    color: var(--color-white);
     margin-bottom: 1.5rem;
 }
 
-.form-group label {
-    display: block;
-    margin-bottom: 0.5rem;
-    font-size: 0.875rem;
-    font-weight: 500;
+.cta-simple p {
+    font-size: 1.125rem;
+    margin-bottom: 3rem;
+    opacity: 0.95;
 }
 
-.form-group input,
-.form-group textarea {
-    width: 100%;
-    padding: 0.75rem 1rem;
-    border: 1px solid #e2e8f0;
-    border-radius: 0.5rem;
-    font-family: var(--font-body);
-    transition: var(--transition);
+.cta-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 1.5rem;
 }
 
-.form-group input:focus,
-.form-group textarea:focus {
-    outline: none;
-    border-color: var(--color-primary);
-    box-shadow: 0 0 0 3px rgba(156, 169, 134, 0.2);
-}
-
-.btn-whatsapp {
+.btn-cta {
     display: inline-flex;
     align-items: center;
-    gap: 0.5rem;
-    background-color: var(--color-primary);
-    color: var(--color-white);
+    justify-content: center;
+    gap: 0.75rem;
+    background-color: var(--color-white);
+    color: var(--color-primary);
     padding: 1rem 2rem;
     border-radius: 50px;
-    text-align: center;
-    margin-top: 1.5rem;
-    width: fit-content;
-    transition: var(--transition);
+    font-weight: 500;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-.btn-whatsapp:hover {
-    background-color: var(--color-primary-dark);
-    transform: translateY(-2px);
-    box-shadow: 0 4px 12px rgba(156, 169, 134, 0.3);
+.btn-cta:hover {
+    transform: scale(1.05);
+    /* Efeito de zoom */
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+    /* Sombra acentuada */
+    color: var(--color-primary-dark);
 }
 
-.btn-submit {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 0.5rem;
-    width: 100%;
-    background-color: var(--color-text-dark);
-    color: var(--color-white);
-    padding: 1rem;
-    border: none;
-    border-radius: 0.5rem;
-    font-size: 1rem;
-    cursor: pointer;
-    transition: var(--transition);
-}
-
-.btn-submit:hover {
-    background-color: var(--color-primary);
+.btn-cta svg,
+.btn-cta i {
+    width: 20px;
+    height: 20px;
+    flex-shrink: 0;
 }
 
 /* --- COMO FUNCIONA (FEATURES) --- */
@@ -658,15 +620,6 @@ footer {
     color: var(--color-white);
 }
 
-/* Responsividade adicional para o Footer no final do arquivo CSS */
-@media (max-width: 768px) {
-    .footer-grid {
-        grid-template-columns: 1fr;
-        gap: 2.5rem;
-    }
-}
-
-
 
 /* --- WHATSAPP FLUTUANTE --- */
 .floating-wa {
@@ -722,7 +675,6 @@ footer {
         display: none;
     }
 
-    /* Ocultar menu no mobile por simplicidade */
     .grid-2,
     .grid-4,
     .grid-3 {
@@ -732,7 +684,6 @@ footer {
 
     .hero {
         padding-top: 6rem;
-        /* Atualizado para se alinhar com a Quote Bar */
         text-align: center;
     }
 
@@ -742,5 +693,15 @@ footer {
 
     .about-text {
         text-align: center;
+    }
+
+    /* Regras do Footer e CTA que estavam no outro bloco */
+    .footer-grid {
+        grid-template-columns: 1fr;
+        gap: 2.5rem;
+    }
+
+    .cta-buttons {
+        flex-direction: column;
     }
 }
